@@ -1,0 +1,10 @@
+extend layout
+
+block content
+  .header
+    h1 New Post
+  .content
+    input(type='text' placeholder='Titel')#post-title
+    .post
+      textarea#post-content
+      button(onclick='submit()') Submit
