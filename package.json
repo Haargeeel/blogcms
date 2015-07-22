@@ -18,10 +18,19 @@
   "homepage": "https://github.com/Haargeeel/blogcms",
   "dependencies": {
     "express": "^4.12.3",
+    "gulp": "^3.9.0",
     "jade": "^1.9.2",
     "mongodb": "^2.0.25",
     "nib": "^1.1.0",
     "path": "^0.11.14",
     "stylus": "^0.50.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-browserify": "^0.5.1",
+    "gulp-jade": "^1.0.1",
+    "gulp-minify": "0.0.5",
+    "gulp-stylus": "^2.0.5",
+    "gulp-uglify": "^1.2.0"
   }
 }

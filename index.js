@@ -10,14 +10,10 @@ function compile(str, path) {
     .use(nib())
 }
 
-app.set('views', __dirname + '/lib/views')
+app.set('views', __dirname + '/build/views')
 app.set('view engine', 'jade')
-app.use(stylus.middleware(
-  { src: __dirname + '/lib'
-  , compile: compile
-  }
-)) 
-app.use(express.static(__dirname + '/lib'))
+
+app.use(express.static(__dirname + '/build/public'))
 
 app.get('/', function(req, res) {
   res.render('index')
