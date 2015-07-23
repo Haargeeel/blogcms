@@ -2,6 +2,8 @@ var express = require('express')
   , stylus = require('stylus')
   , nib = require('nib')
 
+var post = require('./lib/app/controller/post')
+
 var app = express()
 
 function compile(str, path) {
@@ -19,9 +21,15 @@ app.get('/', function(req, res) {
   res.render('index')
 })
 
-app.get('/post', function(req, res) {
+app.get('/newpost', function(req, res) {
   res.render('post')
 })
+
+app.get('/post',
+  post.test)
+//app.get('/post', function(req, res) {
+  //res.json({test: 'test'})
+//})
 
 var server = app.listen(3000, function() {
   var host = server.address().address

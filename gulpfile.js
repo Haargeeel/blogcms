@@ -2,8 +2,7 @@ var gulp = require('gulp')
   , jade = require('gulp-jade')
   , browserify = require('gulp-browserify')
   , stylus = require('gulp-stylus')
-
-gulp.task('default', ['jade', 'browserify', 'stylus', 'fonts'])
+  , jshint = require('gulp-jshint')
 
 gulp.task('jade', function() {
   return gulp.src('lib/app/views/*.jade')
@@ -27,4 +26,15 @@ gulp.task('stylus', function() {
 gulp.task('fonts', function() {
   return gulp.src('lib/public/fonts/*')
         .pipe(gulp.dest('build/public/fonts'))
+})
+
+gulp.task('server', function() {
+  return gulp.src('lib/app/**/*.js')
+         .pipe(jshint())
+})
+
+gulp.task('default', ['jade', 'browserify', 'stylus', 'fonts', 'server'])
+
+gulp.task('watch', function() {
+  gulp.watch('lib/public/**/*', ['default'])
 })
