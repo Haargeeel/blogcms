@@ -17,13 +17,15 @@
   },
   "homepage": "https://github.com/Haargeeel/blogcms",
   "dependencies": {
+    "body-parser": "^1.13.2",
     "express": "^4.12.3",
     "gulp": "^3.9.0",
     "jade": "^1.9.2",
     "mongodb": "~1.4.30",
     "nib": "^1.1.0",
     "path": "^0.11.14",
-    "stylus": "^0.50.0"
+    "stylus": "^0.50.0",
+    "superagent": "^1.2.0"
   },
   "devDependencies": {
     "gulp": "^3.9.0",

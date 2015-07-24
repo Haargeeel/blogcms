@@ -1,6 +1,7 @@
 var express = require('express')
   , stylus = require('stylus')
   , nib = require('nib')
+  , bodyParser = require('body-parser')
 
 var post = require('./lib/app/controller/post')
 
@@ -16,6 +17,7 @@ app.set('views', __dirname + '/build/views')
 app.set('view engine', 'jade')
 
 app.use(express.static(__dirname + '/build/public'))
+app.use(bodyParser.json())
 
 app.get('/', function(req, res) {
   res.render('index')
@@ -24,6 +26,9 @@ app.get('/', function(req, res) {
 app.get('/newpost', function(req, res) {
   res.render('post')
 })
+
+app.post('/post',
+  post.savePost)
 
 app.get('/post',
   post.test)
