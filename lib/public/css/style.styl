@@ -12,6 +12,9 @@ body
 h1, h2
   font-family ubuntu
 
+p
+  font-family aaargh
+
 button
   border none
   border-radius 5px
@@ -90,3 +93,25 @@ button:focus
       width 100px
       font-size 15px
 
+.poststable
+  margin-top 10px
+  table
+    border-collapse collapse
+    width 80%
+    margin auto
+    tbody
+      .grey
+        background-color #eee
+      tr:hover
+        background-color #ccc
+        cursor pointer
+      p
+        margin 0
+        padding 5px 5px 4px 5px
+        white-space nowrap
+        overflow hidden
+        text-overflow ellipsis
+        max-width 300px
+      .delete
+        color red
+        font-weight bold

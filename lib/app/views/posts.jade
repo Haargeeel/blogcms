@@ -1,0 +1,28 @@
+extend layout
+
+block content
+  .header
+    h1 All Posts
+  .poststable
+    table
+      thead
+        tr
+          td 
+            p Title
+          td
+            p Content
+          td 
+            p Author
+      tbody
+        each post, index in posts
+          tr(class=(index % 2 == 0 ? '' : 'grey'))
+            td
+              p= post.title
+              noscript= post._id
+            td
+              p= post.content
+            td
+              p= post.author
+            td
+              p.delete DELETE
+

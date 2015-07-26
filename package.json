@@ -33,7 +33,9 @@
     "gulp-jade": "^1.0.1",
     "gulp-jshint": "^1.11.2",
     "gulp-minify": "0.0.5",
+    "gulp-rename": "^1.2.2",
     "gulp-stylus": "^2.0.5",
+    "gulp-sync": "^0.1.4",
     "gulp-uglify": "^1.2.0",
     "gulp-watch": "^4.3.3"
   }
